@@ -1,0 +1,24 @@
+﻿@model Timetable_Entity
+
+@using (Html.BeginForm("Generate", "Timetable", FormMethod.Post))
+{
+    <div>
+        <h2>Input</h2>
+        <div class="form-group">
+            <label asp-for="WorkingDays">Number of Working Days:</label>
+            <input asp-for="WorkingDays" class="form-control" />
+            <span asp-validation-for="WorkingDays"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectsPerDay">Number of Subjects per Day:</label>
+            <input asp-for="SubjectsPerDay" class="form-control" />
+            <span asp-validation-for="SubjectsPerDay"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TotalSubjects">Total Subjects:</label>
+            <input asp-for="TotalSubjects" class="form-control" />
+            <span asp-validation-for="TotalSubjects"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Timetable</button>
+    </div>
+}
